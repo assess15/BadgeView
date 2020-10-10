@@ -1,9 +1,6 @@
 package q.rorbin.badgeviewdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +8,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import q.rorbin.badgeview.Badge;
-import q.rorbin.badgeview.QBadgeView;
+import com.vaulert.badgeview.Badge;
+import com.vaulert.badgeview.QBadgeView;
+
+import java.util.List;
 
 public class RecyclerViewActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -35,8 +37,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
             data = new DataSupport().getData();
         }
 
+        @NonNull
         @Override
-        public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             return new Holder(LayoutInflater.from(RecyclerViewActivity.this).inflate(R.layout.item_view, parent, false));
         }
 

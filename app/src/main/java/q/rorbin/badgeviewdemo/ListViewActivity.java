@@ -1,6 +1,5 @@
 package q.rorbin.badgeviewdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +9,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
-import q.rorbin.badgeview.Badge;
-import q.rorbin.badgeview.QBadgeView;
+import com.vaulert.badgeview.Badge;
+import com.vaulert.badgeview.QBadgeView;
+
+import java.util.List;
 
 public class ListViewActivity extends AppCompatActivity {
     ListView listview;
